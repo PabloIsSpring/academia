@@ -33,7 +33,7 @@ public class Plano {
     @Column(nullable = false)
     private Boolean ativo;
 
-    @OneToMany(mappedBy = "alunos", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "plano", fetch = FetchType.LAZY)
     @Builder.Default
     private List<Aluno> alunos = new ArrayList<>();
 }
