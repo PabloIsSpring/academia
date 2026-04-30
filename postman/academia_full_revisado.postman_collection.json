@@ -1,0 +1,56 @@
+{
+  "info": {
+    "name": "Academia Full Revisado",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Criar Plano",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "http://localhost:8080/api/planos",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nome\": \"Plano Master\",\n  \"modalidade\": \"Completo\",\n  \"valorMensal\": 229.9,\n  \"ativo\": true\n}"
+        }
+      }
+    },
+    {
+      "name": "Listar Planos",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8081/api/planos"
+      }
+    },
+    {
+      "name": "Criar Aluno",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "http://localhost:8080/api/alunos",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nome\": \"Teste Aluno\",\n  \"email\": \"teste.aluno@facens.edu.br\",\n  \"idade\": 24,\n  \"telefone\": \"15999990000\",\n  \"planoId\": 1\n}"
+        }
+      }
+    },
+    {
+      "name": "Listar Alunos",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/alunos"
+      }
+    }
+  ]
+}
